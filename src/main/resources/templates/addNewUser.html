@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>AddNewUser</title>
+<link rel="stylesheet" type="text/css" 
+href="../static/css/bootstrap.min.css"
+th:href="@{css/bootstrap.min.css}"
+/>
+
+</head>
+<body>
+
+<div class="container">
+	<div class="panel panel-default">
+  <div class="panel-heading">Add New User</div>
+  <div class="panel-body">
+		  <form th:action="@{save}" method="post">
+		  		<div class="form-group">
+					    <label class="control-label" >FirstName</label>
+					    <input class="form-control" type="text" name="first_name" th:value="${user.first_name}"/>
+			    </div>
+			    <div class="form-group">
+					    <label class="control-label" >LastName</label>
+					    <input class="form-control" type="text" name="last_name" th:value="${user.last_name}" />
+			    </div>
+			    <div class="form-group">
+					    <label class="control-label" >Password</label>
+					    <input class="form-control" type="password" name="password" th:value="${user.password}"/>
+			    </div>
+					  
+					  <button type="submit" class="btn btn-primary">Save</button>
+		  </form>
+  </div>
+</div>
+</div>
+
+</body>
+</html>

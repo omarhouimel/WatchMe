@@ -17,19 +17,44 @@ import watch.me.services.UserService;
 public class UserController {
 	@Autowired
 	private UserService userService;
-	
-	@RequestMapping(value="/index")
+
+	@RequestMapping(value = "/index")
 	public String index(Model model) {
 		List<User> listUsers = userService.getAllUser();
 		model.addAttribute("listUsers", listUsers);
-		
-		
+
 		return "users";
 	}
-	@RequestMapping(value="/delete",method=RequestMethod.GET)
+
+	@RequestMapping(value = "/delete", method = RequestMethod.GET)
 	public String delete(int id) {
-		userService.removeUser((long)id);
+		userService.removeUser((long) id);
 		return "redirect:/index";
 	}
 
+	@RequestMapping(value = "/addUser")
+	public String addNewUser(Model model) {
+		User u = new User();
+		model.addAttribute("user", u);
+		return "addNewUser";
+	}
+
+	@RequestMapping(value = "/save", method = RequestMethod.POST)
+	public String save(User u, Model model) {
+
+		userService.addNewUser(u);
+		model.addAttribute("u", u);
+		return "save";
+
+	}
+
+	@RequestMapping(value = "/comment")
+	public String comment(int id, Model model) {
+		User u = userService.getUserById((long) id);
+		model.addAttribute("user_name", u.getFirst_name() + " " + u.getLast_name());
+		List<Comment> list_comment = userService.getAllComment((long) id);
+		model.addAttribute("list_comment", list_comment);
+
+		return "comment";
+	}
 }

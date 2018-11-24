@@ -18,6 +18,10 @@ public class UserService {
 	@PersistenceContext
 	private EntityManager em;
 	
+	
+	public void addNewUser(User u) {
+		em.persist(u);
+	}
 	public void addUser(String first_name,String last_name,String password) {
 		User u = new User(first_name, last_name, password);
 		em.persist(u);
@@ -45,6 +49,10 @@ public class UserService {
 	public List<Comment>getAllComment(Long userId){
 		User u = em.find(User.class, userId);
 		return u.getComments();
+	}
+	
+	public User getUserById(Long id) {
+		return em.find(User.class, id);
 	}
 
 }

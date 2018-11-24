@@ -2,6 +2,8 @@ package watch.me;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -30,9 +32,12 @@ public class WatchMeApplication implements CommandLineRunner {
 //		userService.addUser("ahmed", "Chatii", "500");
 //		userService.addUser("Taha", "youssef", "500");
 //		userService.addUser("monji", "boulares", "500");
-		//DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
-		//Comment c = new Comment("hello Omar", df.parse("03/02/1996"));
-		//userService.addComment((long) 1,c);
-		//System.out.println(userService.getAllComment((long) 1).get(0).getBody());
+		
+
+
+		  
+		//Comment c = new Comment("This is the first comment");
+		//userService.addComment((long) 7,c);
+		//System.out.println(userService.getAllComment((long) 7).get(0).getBody());
 	}
 }

@@ -29,12 +29,16 @@ th:href="@{css/bootstrap.min.css}"
 	  		<td th:text="${u.id}"></td>
 	  	    <td th:text="${u.first_name}"></td>
 	  	    <td th:text="${u.last_name}"></td>
+	  	    <td><a th:href="@{comment(id=${u.id})}">See Comments</a></td>
 	  	    <td><a th:href="@{delete(id=${u.id})}">Delete</a></td>
-	  		
+			
+				  		
 	  		</tr>
 	  </tbody>
   
 </table>
+
+<a th:href="@{addUser}">AddNewUser</a></td>
 </div> 
 </body>
 </html>

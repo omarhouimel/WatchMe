@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>AddNewUser</title>
+<link rel="stylesheet" type="text/css"
+	href="../static/css/bootstrap.min.css"
+	th:href="@{css/bootstrap.min.css}" />
+
+</head>
+<body>
+
+	<div class="container">
+
+
+		<table class="table">
+			<thead>
+				<th th:text="${user_name}"></th>
+				<tr>
+					<th>Comment</th>
+					<th>Date</th>
+
+
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="c:${list_comment}">
+					<td th:text="${c.body}"></td>
+					<td th:text="${c.date}"></td>
+
+
+
+				</tr>
+			</tbody>
+
+		</table>
+
+	</div>
+	</div>
+	</div>
+</body>
+</html>

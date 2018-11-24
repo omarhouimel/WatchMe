@@ -1,6 +1,9 @@
 package watch.me.entites;
 
 import java.io.Serializable;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -33,10 +36,19 @@ public class Comment implements Serializable {
 	public Long getId() {
 		return id;
 	}
-	public Comment(String body, Date date) {
+	public Comment(String body) {
 		super();
+		String pattern = "dd/MM/yyyy";
+		DateFormat df = new SimpleDateFormat(pattern);
+	    
+		String dateInString =new SimpleDateFormat(pattern).format(new Date());
 		this.body = body;
-		this.date = date;
+		try {
+			this.date = df.parse(dateInString);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	public Comment() {
 		super();
