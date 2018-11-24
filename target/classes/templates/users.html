@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Users</title>
+<link rel="stylesheet" type="text/css" 
+href="../static/css/bootstrap.min.css"
+th:href="@{css/bootstrap.min.css}"
+/>
+
+</head>
+<body>
+
+<div class="container">
+<h3>Users</h3>
+
+
+ <table  class="table">
+	 <thead>
+		  <tr>
+		  	<th>ID</th>
+		    <th>Firstname</th>
+		    <th>Lastname</th>
+		
+		  </tr>
+	  </thead>
+	  <tbody>
+	  		<tr th:each= "u:${listUsers}">
+	  		<td th:text="${u.id}"></td>
+	  	    <td th:text="${u.first_name}"></td>
+	  	    <td th:text="${u.last_name}"></td>
+	  	    <td><a th:href="@{delete(id=${u.id})}">Delete</a></td>
+	  		
+	  		</tr>
+	  </tbody>
+  
+</table>
+</div> 
+</body>
+</html>
