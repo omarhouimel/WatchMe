@@ -1,0 +1,49 @@
+<div class="row">
+  <div  class="col-md-12 col-lg-16 col-xxxl-4">
+    <nb-card>
+      <nb-card-header>Movie</nb-card-header>
+      <nb-card-body>
+        <nb-card-header>{{movieName}}</nb-card-header>
+
+      </nb-card-body>
+    </nb-card>
+  </div>
+  
+  <div class="col-md-12 col-lg-8 col-xxxl-4">
+    <nb-card>
+      <nb-card-header>Comments</nb-card-header>
+      <div *ngFor="let item of comments" >
+      <nb-card-body>
+        {{item.body}}
+      </nb-card-body>
+    </div>
+    </nb-card>
+  </div>
+    <div class="col-md-12 col-lg-4 col-xxxl-4">
+    <nb-card>
+      <nb-card-header>Date</nb-card-header>
+      <div  *ngFor="let item of comments" >
+      <nb-card-body>
+         {{item.date}}
+         
+      </nb-card-body>
+    </div>
+    </nb-card>
+  </div>
+  
+  <div #button class="col-md-12 col-lg-16 col-xxxl-4">
+    <nb-card>
+      <nb-card-header>New Comment</nb-card-header>
+      <nb-card-body>
+        <input #comment  nbInput placeholder="Comment" /> 
+        <div>
+        <button  nbButton (click)="Onclick(button)">Add Comment</button >
+        </div>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>
+
+<!-- <div *ngFor="let item of comments" >
+  {{item.body}}
+</div> -->

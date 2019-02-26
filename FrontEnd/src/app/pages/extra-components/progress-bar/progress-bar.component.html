@@ -1,0 +1,46 @@
+<div class="button-container">
+    <button nbButton (click)="onClick(button)" nbButton>Rate Now</button>
+  </div>
+<div class="row">
+  <div class="col-md-12 col-lg-12 col-xxxl-6">
+    <nb-card>
+      <nb-card-header>Progress Bar Status</nb-card-header>
+      <nb-card-body>
+        <nb-progress-bar [value]=result.plot_rating status="primary">Plot</nb-progress-bar>
+        <nb-progress-bar [value]=result.quality_rating status="info">Quality</nb-progress-bar>
+        <nb-progress-bar [value]=result.cinematography_rating status="success">Cinematography</nb-progress-bar>
+        <nb-progress-bar [value]=result.originality_rating status="warning">Originality</nb-progress-bar>
+        
+      </nb-card-body>
+    </nb-card>
+  
+      <div  *ngIf=show>
+    <div>
+    <ngx-interactive-progress-bar></ngx-interactive-progress-bar>
+  </div>
+  </div>
+</div>
+<div #button ></div>
+
+
+  <!-- <div class="col-md-12 col-lg-12 col-xxxl-6">
+    <nb-card>
+      <nb-card-header>Progress Bar Size</nb-card-header>
+      <nb-card-body>
+        <nb-progress-bar [value]="20" size="xs">xs</nb-progress-bar>
+        <nb-progress-bar [value]="40" size="sm">sm</nb-progress-bar>
+        <nb-progress-bar [value]="60">none</nb-progress-bar>
+        <nb-progress-bar [value]="80" size="lg">lg</nb-progress-bar>
+        <nb-progress-bar [value]="100" size="xlg">xlg</nb-progress-bar>
+      </nb-card-body>
+    </nb-card>
+
+    <nb-card>
+      <nb-card-header>Progress Bar Value</nb-card-header>
+      <nb-card-body>
+        <nb-progress-bar [value]="40" status="primary" [displayValue]="true"></nb-progress-bar>
+        <nb-progress-bar [value]="60" status="primary">Custom value</nb-progress-bar>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div> -->

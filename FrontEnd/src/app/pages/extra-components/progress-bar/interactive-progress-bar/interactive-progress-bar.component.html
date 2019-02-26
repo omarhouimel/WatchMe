@@ -1,0 +1,61 @@
+
+<nb-card>
+    
+  <nb-card-header>Progress Bar Interactive</nb-card-header>
+  <nb-card-body>
+    <div class="container">
+      <nb-actions size="medium">
+        <nb-action icon="nb-arrow-down" (click)="setValue(value - 10)"></nb-action>
+      </nb-actions>
+      <nb-progress-bar [value]="value" [status]="status" [displayValue]="true"></nb-progress-bar>
+      <nb-actions size="medium">
+        <nb-action icon="nb-arrow-up" (click)="setValue(value + 10)"></nb-action>
+      </nb-actions>
+    </div>
+  </nb-card-body>
+</nb-card>
+<nb-card>
+  <nb-card-header>Progress Bar Interactive</nb-card-header>
+  <nb-card-body>
+    <div class="container">
+      <nb-actions size="medium">
+        <nb-action icon="nb-arrow-down" (click)="setValue1(value1 - 10)"></nb-action>
+      </nb-actions>
+      <nb-progress-bar [value]="value1" [status]="status" [displayValue]="true"></nb-progress-bar>
+      <nb-actions size="medium">
+        <nb-action icon="nb-arrow-up" (click)="setValue1(value1 + 10)"></nb-action>
+      </nb-actions>
+    </div>
+  </nb-card-body>
+</nb-card>
+<nb-card>
+  <nb-card-header>Progress Bar Interactive</nb-card-header>
+  <nb-card-body>
+    <div class="container">
+      <nb-actions size="medium">
+        <nb-action icon="nb-arrow-down" (click)="setValue2(value2 - 10)"></nb-action>
+      </nb-actions>
+      <nb-progress-bar [value]="value2" [status]="status" [displayValue]="true"></nb-progress-bar>
+      <nb-actions size="medium">
+        <nb-action icon="nb-arrow-up" (click)="setValue2(value2 + 10)"></nb-action>
+      </nb-actions>
+    </div>
+  </nb-card-body>
+</nb-card>
+<nb-card>
+  <nb-card-header>Progress Bar Interactive</nb-card-header>
+  <nb-card-body>
+    <div class="container">
+      <nb-actions size="medium">
+        <nb-action icon="nb-arrow-down" (click)="setValue3(value3 - 10)"></nb-action>
+      </nb-actions>
+      <nb-progress-bar [value]="value3" [status]="status" [displayValue]="true"></nb-progress-bar>
+      <nb-actions size="medium">
+        <nb-action icon="nb-arrow-up" (click)="setValue3(value3 + 10)"></nb-action>
+      </nb-actions>
+    </div>
+  </nb-card-body>
+</nb-card>
+<div class="button-container">
+    <button  (click)="onClick()" nbButton>Submit Now</button>
+  </div>
